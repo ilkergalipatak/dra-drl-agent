@@ -93,7 +93,15 @@ class HybridDRAFeatureSelector:
 
     @staticmethod
     def _default_config() -> Dict[str, Any]:
-        """Return default configuration."""
+        """Return default configuration from config.yaml if available."""
+        if Path("config.yaml").exists():
+            try:
+                with open("config.yaml", "r", encoding="utf-8") as f:
+                    return yaml.safe_load(f)
+            except Exception as e:
+                print(f"Warning: Failed to load config.yaml: {e}")
+
+        # Fallback defaults
         return {
             "llm": {
                 "base_url": "http://localhost:11434",
