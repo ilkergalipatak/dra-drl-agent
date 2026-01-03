@@ -51,7 +51,7 @@ class DivineSpeech:
 
     def __init__(
         self,
-        base_url: str = "https://ollama.parts-soft.net",
+        base_url: str = "http://localhost:11434",
         model: str = "qwen3-coder:30b",
         api_key: str = "",
         timeout: int = 120,
@@ -399,7 +399,7 @@ def create_generator_from_config(config: Dict[str, Any]) -> DivineSpeech:
     """Create DivineSpeech generator from configuration dictionary."""
     llm_config = config.get("llm", {})
     return DivineSpeech(
-        base_url=llm_config.get("base_url", "https://ollama.parts-soft.net"),
+        base_url=llm_config.get("base_url", "http://localhost:11434"),
         model=llm_config.get("model", "qwen3:32b"),
         api_key=llm_config.get("api_key", ""),
         timeout=llm_config.get("timeout", 120),

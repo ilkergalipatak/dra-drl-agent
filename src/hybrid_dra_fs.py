@@ -96,7 +96,7 @@ class HybridDRAFeatureSelector:
         """Return default configuration."""
         return {
             "llm": {
-                "base_url": "https://ollama.parts-soft.net",
+                "base_url": "http://localhost:11434",
                 "model": "qwen3-coder:30b",
                 "api_key": "",
                 "timeout": 120,
