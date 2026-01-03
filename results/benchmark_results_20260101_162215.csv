@@ -1,0 +1,3 @@
+method,dataset,classifier,mean_fitness,std_fitness,mean_accuracy,std_accuracy,mean_features,mean_runtime,n_runs
+baseline,heart_failure,knn,0.11659117305458777,0.0,0.8222222222222222,0.0,4.0,13.81495475769043,1
+baseline,mobile_price,knn,0.22283571428571425,0.0,0.7866666666666666,0.0,3.0,94.8273606300354,1

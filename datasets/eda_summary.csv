@@ -1,0 +1,10 @@
+dataset,samples,features,classes,missing_pct,n_outliers,n_categorical
+student_performance,8000,24,3,0.0,2,4
+breast_cancer_custom,569,30,2,0.0,29,0
+credit_card_fraud,10000,9,2,0.0,4,1
+customer_churn,50000,23,2,4.267913043478261,20,3
+healthcare,55500,9,3,0.0,0,6
+heart_failure,299,12,2,0.0,5,0
+marketing_campaign,2240,24,2,0.044642857142857144,18,2
+mobile_price,2000,20,4,0.0,3,0
+credit_risk,15000,12,2,0.0,8,4

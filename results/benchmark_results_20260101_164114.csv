@@ -1,0 +1,2 @@
+method,dataset,classifier,mean_fitness,std_fitness,mean_accuracy,std_accuracy,mean_features,mean_runtime,n_runs
+baseline,heart_failure,knn,0.11659117305458777,0.0,0.8222222222222222,0.0,4.0,8.896201610565186,1
