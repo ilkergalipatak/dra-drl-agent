@@ -1,0 +1,64 @@
+# LLM-Hybrid DRA Feature Selection Configuration
+
+# LLM Settings
+llm:
+  base_url: "https://ollama.parts-soft.net"
+  model: "qwen3-coder:30b"
+  api_key: "9bb67e0f507743270aa7289fbb970bc088761b448e78368c28ebda15d7f7d4ec"
+  timeout: 120
+  max_retries: 3
+
+# DRA Optimizer Settings
+dra:
+  population_size: 50
+  max_iterations: 100
+  num_groups: 5
+  belief_profile_rate: 0.5
+  miracle_rate: 0.5
+  proselytism_rate: 0.9
+  reward_penalty_rate: 0.2
+
+# Feature Selection Settings
+feature_selection:
+  alpha: 0.99  # Trade-off: accuracy vs feature reduction
+  classifiers:  # Classifiers to use in benchmarks
+    - knn
+    - svm
+    - rf
+    - lr
+  default_classifier: knn  # Default for single runs
+  knn_neighbors: 5
+  cv_folds: 5
+  test_size: 0.3
+
+# Datasets Settings
+datasets:
+  use_custom: true  # Use custom CSV datasets from datasets folder
+  use_sklearn: true  # Include sklearn built-in datasets
+  max_samples: 2000  # Limit for large datasets
+
+# DRL Agent Settings
+drl:
+  algorithm: "PPO"
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  total_timesteps: 100000
+
+# Stagnation Detection
+stagnation:
+  window_size: 10
+  threshold: 0.001
+  diversity_threshold: 0.1
+
+# Experiment Settings
+experiment:
+  random_seed: 42
+  num_runs: 30
+  save_results: true
+  results_dir: "results"
